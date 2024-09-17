@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+}
+:root {
+  --primaryColor: #007ed9;
+}
+h1 {
+  padding: 20px;
+  margin: 0 0 20px;
+  background-color: white;
+  text-align: center;
+  color: var(--primaryColor);
+  border-bottom: 1px solid var(--primaryColor);
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  max-width: 900px;
+}
+h2 {
+  color: var(--primaryColor);
+  text-align: center;
+}
+form {
+  padding: 20px;
+  background-color: white;
+  border-radius: 6px;
+  text-align: center;
+}
+form h2 {
+  margin: 0 0 15px;
+}
+form input:not([type="submit"]) {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #f6f6f6;
+  border: none;
+  border-bottom: 1px solid transparent;
+  color: var(--primaryColor);
+  font-weight: bold;
+  transition: 0.3s;
+}
+form input:focus {
+  outline: none;
+  border-bottom-color: var(--primaryColor);
+}
+.category-suggestions {
+  padding: 25px;
+  background-color: #ebebeb;
+}
+.category-suggestions h4 {
+  margin: 0 0 10px;
+  color: #444;
+}
+.categories,
+.filter {
+  border: none;
+  border-bottom: 1px solid var(--primaryColor);
+  outline: none;
+  padding: 15px;
+  font-weight: bold;
+  min-width: 120px;
+  cursor: pointer;
+}
+.category-suggestions select option[disabled] {
+  color: var(--primaryColor);
+  font-weight: bold;
+  background-color: #e7e7e7;
+}
+option:checked {
+  background-color: #ddd;
+  border-bottom: 1px solid var(--primaryColor);
+  font-weight: bold;
+}
+.category-suggestions select option:checked {
+  background-color: #ddd;
+}
+form :is(button, .add-bookmark) {
+  padding: 15px;
+  border: none;
+  background-color: var(--primaryColor);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form :is(button, .add-bookmark):hover {
+  background-color: #006ebd;
+}
+.new-category {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  gap: 5px;
+}
+form .new-category input {
+  margin: 0;
+}
+.new-category .buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.new-category button {
+  min-width: 150px;
+  border-radius: 6px;
+}
+@media (max-width: 767px) {
+  .new-category {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .new-category button {
+    flex: 1;
+  }
+}
+.new-category .remove-category {
+  background-color: #f44336;
+}
+.new-category .remove-category:hover {
+  background-color: #f12a1c;
+}
+.add-bookmark {
+  width: 100%;
+}
+
+.bookmarks-filter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #ddd;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+.bookmarks-filter input {
+  flex: 1;
+  padding: 15px;
+  background-color: #f6f6f6;
+  border: none;
+  border-bottom: 1px solid transparent;
+  color: var(--primaryColor);
+  font-weight: bold;
+  transition: 0.3s;
+}
+.bookmarks-filter input:focus {
+  outline: none;
+  border-bottom-color: var(--primaryColor);
+}
+.bookmarks {
+  display: grid;
+  gap: 10px;
+}
+.bookmarks .bookmark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+}
+.bookmarks .bookmark span {
+  background-color: var(--primaryColor);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.bookmarks .bookmark .link {
+  flex: 1;
+}
+.bookmarks .bookmark a {
+  text-decoration: none;
+  padding: 15px;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.bookmarks .bookmark a:hover {
+  color: var(--primaryColor);
+}
+.bookmarks .bookmark button {
+  background-color: #f44336;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  transition: 0.3s;
+}
+.bookmarks .bookmark button:hover {
+  background-color: #f12a1c;
+}
+
+/* Alert */
+
+.swal2-title {
+  font-size: 24px;
+  color: #555;
+}
+.bookmarks .search-result {
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--primaryColor);
+  background-color: #f5f6fa;
+  text-align: center;
+  font-weight: bold;
+}
+.bookmarks .search-result h3 {
+  margin: 0;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Bookmarks Manager Application</h1>
+    <div class="container">
+      <form action="">
+        <h2>Add New Bookmark</h2>
+        <input
+          type="text"
+          class="title"
+          placeholder="Website Title"
+          autofocus
+        />
+        <input type="text" class="url" placeholder="Website URL" />
+        <div class="category-suggestions">
+          <h4>Choose From Categories Or Add New One</h4>
+          <select class="categories">
+            <option value="" disabled hidden selected>Category</option>
+            <optgroup label="Categories" class="user-categories"></optgroup>
+          </select>
+        </div>
+        <div class="new-category">
+          <input
+            type="text"
+            class="category-value"
+            placeholder="Category Name"
+          />
+          <div class="buttons">
+            <button class="add-category">Add Category</button>
+            <button class="remove-category">Remove Category</button>
+          </div>
+        </div>
+        <button class="add-bookmark" onclick="addBookmarks()">
+          Add Bookmark
+        </button>
+      </form>
+      <h2 class="all">Bookmarks</h2>
+      <div class="bookmarks-filter">
+        <input type="text" class="search" placeholder="Search For Website" />
+        <select class="filter">
+          <option>All</option>
+          <optgroup label="Categories" class="filter-categories"></optgroup>
+        </select>
+      </div>
+      <div class="bookmarks"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
